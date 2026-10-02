@@ -1,48 +1,51 @@
+```css
 /* --- RESET BÁSICO --- */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 
 /* --- CUERPO --- */
 
 body {
-    background-color: #f0f4f8;
-    color: #333;
-}
-button {
-    background-color: #1a365d;
+    background: #f8f5ff;
+    color: #29223d;
 }
 
-/* --- MENÚ --- */
+
+/* --- MENÚ PRINCIPAL --- */
 
 .menu-principal {
-    background-color: #1a365d;
-    padding: 15px;
+    background: linear-gradient(90deg, #5b21b6, #9333ea, #db2777);
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(91, 33, 182, 0.25);
 }
 
 .menu-principal ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
+    gap: 15px;
 }
 
 .menu-principal a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 11px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
 }
 
 .menu-principal a:hover,
 .menu-principal a.activo {
-    background-color: #2b6cb0;
+    background-color: white;
+    color: #7c3aed;
 }
 
 
@@ -50,39 +53,43 @@ button {
 
 .contenido-inicio {
     text-align: center;
-    padding: 50px 20px;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #ede9fe, #fce7f3);
 }
 
 .logo-central {
-    width: 180px;
+    width: 190px;
     height: auto;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 25px auto;
+    border-radius: 20px;
 }
 
 .contenido-inicio h1 {
-    color: #1a365d;
-    margin-bottom: 10px;
+    color: #6d28d9;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
 }
 
 .contenido-inicio p {
-    font-size: 1.1rem;
-    color: #555;
+    font-size: 1.15rem;
+    color: #6b6478;
 }
 
 
 /* --- CONTENEDOR --- */
 
 .contenedor-principal {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 1150px;
+    margin: 45px auto;
+    padding: 0 25px;
 }
 
 .titulo-seccion {
     text-align: center;
-    color: #1a365d;
-    margin-bottom: 25px;
+    color: #7c3aed;
+    margin-bottom: 35px;
+    font-size: 2rem;
 }
 
 
@@ -90,47 +97,58 @@ button {
 
 .rejilla-paquetes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
 }
 
 
 /* --- TARJETAS --- */
 
 .tarjeta {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
+    background: #ffffff;
+    border: none;
+    border-radius: 18px;
+    padding: 28px;
     text-align: center;
+    box-shadow: 0 8px 25px rgba(76, 29, 149, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(76, 29, 149, 0.2);
 }
 
 .tarjeta h3 {
-    color: #2b6cb0;
-    margin-bottom: 10px;
+    color: #9333ea;
+    margin-bottom: 14px;
+    font-size: 1.3rem;
 }
 
 .tarjeta p {
-    color: #666;
-    margin-bottom: 10px;
+    color: #70687d;
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
 
 .tarjeta .precio {
     font-weight: bold;
-    color: #dd6b20;
-    font-size: 1.2rem;
+    color: #e11d48;
+    font-size: 1.35rem;
+    margin: 15px 0;
 }
 
 
 /* --- FORMULARIO --- */
 
 .formulario-reserva {
-    background-color: white;
-    max-width: 450px;
+    background: #ffffff;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #e9d5ff;
+    box-shadow: 0 10px 30px rgba(76, 29, 149, 0.12);
 
     display: flex;
     flex-direction: column;
@@ -141,10 +159,21 @@ button {
 .formulario-reserva select,
 .formulario-reserva textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 13px;
+    border: 2px solid #ddd6fe;
+    border-radius: 10px;
     font-size: 1rem;
+    background-color: #faf9ff;
+    color: #29223d;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formulario-reserva input:focus,
+.formulario-reserva select:focus,
+.formulario-reserva textarea:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 0 3px #f3e8ff;
 }
 
 
@@ -152,6 +181,7 @@ button {
 
 .formulario-reserva textarea {
     resize: vertical;
+    min-height: 100px;
 }
 
 
@@ -161,20 +191,34 @@ button {
 .boton-tarjeta,
 .boton-enviar {
     display: inline-block;
-    background-color: #2b6cb0;
+    background: linear-gradient(90deg, #7c3aed, #db2777);
     color: white;
-    padding: 10px 18px;
+    padding: 12px 22px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 25px;
     border: none;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .boton-enlace:hover,
 .boton-tarjeta:hover,
 .boton-enviar:hover {
-    background-color: #1a365d;
+    background: linear-gradient(90deg, #5b21b6, #be185d);
+    transform: scale(1.05);
+}
+
+
+/* --- BOTÓN GENERAL --- */
+
+button {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
 
@@ -182,9 +226,10 @@ button {
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #e2e8f0;
-    margin-top: 40px;
+    padding: 25px;
+    background: #2e1065;
+    color: #f5f3ff;
+    margin-top: 60px;
     font-size: 0.9rem;
 }
 
@@ -198,6 +243,10 @@ footer {
         gap: 20px;
     }
 
+    .contenido-inicio h1 {
+        font-size: 2rem;
+    }
+
 }
 
 
@@ -205,13 +254,21 @@ footer {
 
     .menu-principal ul {
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        gap: 8px;
     }
 
     .rejilla-paquetes {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 18px;
+    }
+
+    .contenedor-principal {
+        padding: 0 15px;
+    }
+
+    .titulo-seccion {
+        font-size: 1.6rem;
     }
 
 }
+
