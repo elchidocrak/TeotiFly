@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TeotiFly | Inicio</title>
-<link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Battle</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Menú de navegación principal -->
-<nav class="menu-principal">
-<ul>
-<li><a href="index.html" class="activo">Inicio</a></li>
-<li><a href="paquetes.html">Paquetes</a></li>
-<li><a href="reservas.html">Reservas</a></li>
-</ul>
-</nav>
-<!-- Contenido principal centrado -->
-<main class="contenido-inicio">
-<!-- Imagen del logo traída desde la carpeta assets -->
-<img src="assets/img/logo.png" alt="Logo de TeotiFly" class="logo-central">
-<h1>Bienvenido a TeotiFly</h1>
-<p> Para volar en globo sobre las pirámides de Teotihuacán,Vive la experiencia de volar en globo sobre las pirámides de Teotihuacán en la que tu aser tu esperiencia</p>
-<br>
-<a href="paquetes.html" class="boton-enlace">Explorar Paquetes</a>
+
+<header class="topbar">
+    <h1>COLOR <span>BATTLE</span></h1>
+    <div class="room">SALA: CB2026</div>
+</header>
+
+<main class="game">
+
+    <section class="players">
+        <div class="player">🧑 Jugador 2</div>
+        <div class="player">👩 Jugador 3</div>
+        <div class="player">🤖 Jugador 4</div>
+    </section>
+
+    <section class="table">
+
+        <div class="discard">
+            <p>ÚLTIMA CARTA</p>
+            <div id="discardCard" class="card-placeholder">
+                🎴
+            </div>
+        </div>
+
+        <div class="deck">
+            <p>MAZO</p>
+            <button id="drawButton" class="deck-card">
+                CB
+            </button>
+        </div>
+
+    </section>
+
+    <section class="collection">
+        <h2>🧬 Mi colección</h2>
+        <div id="organs" class="organs">
+            <div class="empty">Órgano 1</div>
+            <div class="empty">Órgano 2</div>
+            <div class="empty">Órgano 3</div>
+            <div class="empty">Órgano 4</div>
+        </div>
+    </section>
+
+    <section class="hand-section">
+        <h2>🃏 Tus cartas</h2>
+        <div id="hand" class="hand"></div>
+    </section>
+
+    <footer>
+        <p id="status">¡Es tu turno!</p>
+        <small>COLOR BATTLE © 2026</small>
+    </footer>
+
 </main>
-<footer>
-<p>CETIS N° 141 - Submódulo 1: Construye Aplicaciones Web</p>
-</footer>
+
+<script src="game.js"></script>
 </body>
 </html>
